@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    input {
+      margin: 10px;
+    }
+  </style>
+  <title>Health Details</title>
+</head>
+<body>
+  <!-- Modal for entering health details -->
+  <h1 class="text-center">Enter your health details</h1>
+  <div class="container">
+    <h2 class="text-center">Personal Information</h2>
+    
+      <div class="form-group">
+        <label for="weight">Weight:</label>
+        <input type="text" class="form-control" name="weight" id="weight" placeholder="Current Weight">
+        <input type="text" class="form-control" name="target_weight" id="target_weight" placeholder="Target Weight">
+      </div>
+      <!-- Div for blood pressure, sugar, cholesterol, height -->
+      <div class="form-group">
+        <label for="height">Height:</label>
+        <input type="text" class="form-control" name="height" id="height" placeholder="Current Height">
+        <input type="text" class="form-control" name="target_height" id="target_height" placeholder="Target Height">
+      </div>
+      <div class="form-group">
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="text" class="form-control" name="blood_pressure" id="blood_pressure">
+      </div>
+      <div class="form-group">
+        <label for="blood_sugar">Blood Sugar:</label>
+        <input type="text" class="form-control" name="blood_sugar" id="blood_sugar">
+      </div>
+      <div class="form-group">
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="text" class="form-control" name="cholesterol" id="cholesterol">
+      </div>
+      <button type="submit" id="sb" class="btn btn-primary mb-3">Submit</button>
+    
+  </div>
+  <h1 class="text-center">Our servers are fully compliant with HIPAA and GDPR</h1>
+  <script>
+    document.getElementById("sb").onclick = function() {
+      mf();
+    }
+    function mf(){
+    if(document.getElementById("cholesterol").value > 200) {
+        window.location.href="bad-results.html"
+    }
+    else{
+        window.location.href="good-results.html";
+    }
+}
+
+  </script>
+</body>
+</html>

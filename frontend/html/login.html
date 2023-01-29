@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    form {
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+  <form action="info.html" method="get">
+    <h2>Login</h2>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <button type="submit">Login</button>
+    <a href="">Forgot Password</a>
+  </form>
+</body>
+</html>
